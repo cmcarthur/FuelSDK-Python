@@ -17,7 +17,7 @@ class _PropertyAppender(Appender):
         else:
             child.setText(child_value)
             parent.append(child)
-            for item in p.items():
+            for item in list(p.items()):
                 cont = Content(tag=item[0], value=item[1])
                 Appender.append(self, child, cont)
 
